@@ -14,6 +14,10 @@
 		1918DA632AAA5E7300456184 /* SugarRushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA622AAA5E7300456184 /* SugarRushTests.swift */; };
 		1918DA6D2AAA5E7300456184 /* SugarRushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA6C2AAA5E7300456184 /* SugarRushUITests.swift */; };
 		1918DA6F2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA6E2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift */; };
+		1918DA832AAA604400456184 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA822AAA604400456184 /* APIServiceProtocol.swift */; };
+		1918DA852AAA60BC00456184 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA842AAA60BC00456184 /* APIService.swift */; };
+		1918DA872AAA671000456184 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA862AAA671000456184 /* APIError.swift */; };
+		1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA882AAA6B5700456184 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		1918DA682AAA5E7300456184 /* SugarRushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarRushUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1918DA6C2AAA5E7300456184 /* SugarRushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarRushUITests.swift; sourceTree = "<group>"; };
 		1918DA6E2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarRushUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1918DA822AAA604400456184 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		1918DA842AAA60BC00456184 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1918DA862AAA671000456184 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		1918DA882AAA6B5700456184 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,11 @@
 		1918DA502AAA5E6D00456184 /* SugarRush */ = {
 			isa = PBXGroup;
 			children = (
-				1918DA512AAA5E6D00456184 /* SugarRushApp.swift */,
-				1918DA532AAA5E6D00456184 /* ContentView.swift */,
+				1918DA7B2AAA5EA300456184 /* Model */,
+				1918DA7C2AAA5EAA00456184 /* Views */,
+				1918DA7D2AAA5EB300456184 /* ViewModels */,
+				1918DA7E2AAA5EBD00456184 /* Networking */,
+				1918DA7F2AAA600400456184 /* App */,
 				1918DA552AAA5E7200456184 /* Assets.xcassets */,
 				1918DA572AAA5E7200456184 /* Preview Content */,
 			);
@@ -125,6 +136,47 @@
 				1918DA6E2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift */,
 			);
 			path = SugarRushUITests;
+			sourceTree = "<group>";
+		};
+		1918DA7B2AAA5EA300456184 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1918DA7C2AAA5EAA00456184 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1918DA532AAA5E6D00456184 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1918DA7D2AAA5EB300456184 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1918DA7E2AAA5EBD00456184 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1918DA822AAA604400456184 /* APIServiceProtocol.swift */,
+				1918DA882AAA6B5700456184 /* NetworkManager.swift */,
+				1918DA842AAA60BC00456184 /* APIService.swift */,
+				1918DA862AAA671000456184 /* APIError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1918DA7F2AAA600400456184 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1918DA512AAA5E6D00456184 /* SugarRushApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */,
+				1918DA832AAA604400456184 /* APIServiceProtocol.swift in Sources */,
+				1918DA852AAA60BC00456184 /* APIService.swift in Sources */,
 				1918DA542AAA5E6D00456184 /* ContentView.swift in Sources */,
 				1918DA522AAA5E6D00456184 /* SugarRushApp.swift in Sources */,
+				1918DA872AAA671000456184 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
