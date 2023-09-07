@@ -17,7 +17,6 @@ class DessertsViewModel: ObservableObject {
         Task {
             do {
                 let data = try await NetworkManager.shared.service.fetchData(using: url, for: Desserts.self)
-                print(data)
                 Task { @MainActor in
                     self.fetchedDesserts = data.desserts
                 }

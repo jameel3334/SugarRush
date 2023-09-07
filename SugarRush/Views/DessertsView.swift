@@ -11,11 +11,17 @@ struct DessertsView: View {
     @StateObject var viewModel = DessertsViewModel()
     var body: some View {
         NavigationView {
-            List (viewModel.fetchedDesserts) { dessert in
-                NavigationLink(destination: MealsView(id: dessert.id),
-                               label:  { Text (dessert.title)} )
+            List (viewModel.fetchedDesserts.sorted(by: { $0.title < $1.title })) { dessert in
+                NavigationLink(destination:
+                                MealsView(id: dessert.id),
+                               label:  {
+                    ListRowView(imageURL: dessert.image,
+                                title: dessert.title)
+                })
             }
             .task { viewModel.fetchDessertData() }
+            .navigationBarTitle(Constants.String.dessertsTitleName)
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

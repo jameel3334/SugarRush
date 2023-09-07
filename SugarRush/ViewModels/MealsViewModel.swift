@@ -13,7 +13,6 @@ class MealsViewModel: ObservableObject {
     let baseURL = Constants.Url.mealBaseURL
     var id: String!
   
-
      func fetchMealsData(using id: String) {
         let url = "\(baseURL)\(id)"
         Task {
