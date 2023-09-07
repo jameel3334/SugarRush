@@ -18,6 +18,8 @@
 		1918DA852AAA60BC00456184 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA842AAA60BC00456184 /* APIService.swift */; };
 		1918DA872AAA671000456184 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA862AAA671000456184 /* APIError.swift */; };
 		1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA882AAA6B5700456184 /* NetworkManager.swift */; };
+		1918DA8B2AAA7D4300456184 /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8A2AAA7D4300456184 /* Dessert.swift */; };
+		1918DA8D2AAA7E3E00456184 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8C2AAA7E3E00456184 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		1918DA842AAA60BC00456184 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1918DA862AAA671000456184 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		1918DA882AAA6B5700456184 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1918DA8A2AAA7D4300456184 /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
+		1918DA8C2AAA7E3E00456184 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 		1918DA7B2AAA5EA300456184 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1918DA8A2AAA7D4300456184 /* Dessert.swift */,
+				1918DA8C2AAA7E3E00456184 /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,7 +317,9 @@
 			files = (
 				1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */,
 				1918DA832AAA604400456184 /* APIServiceProtocol.swift in Sources */,
+				1918DA8B2AAA7D4300456184 /* Dessert.swift in Sources */,
 				1918DA852AAA60BC00456184 /* APIService.swift in Sources */,
+				1918DA8D2AAA7E3E00456184 /* Meal.swift in Sources */,
 				1918DA542AAA5E6D00456184 /* ContentView.swift in Sources */,
 				1918DA522AAA5E6D00456184 /* SugarRushApp.swift in Sources */,
 				1918DA872AAA671000456184 /* APIError.swift in Sources */,
