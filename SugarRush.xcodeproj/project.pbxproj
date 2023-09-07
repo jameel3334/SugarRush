@@ -20,6 +20,11 @@
 		1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA882AAA6B5700456184 /* NetworkManager.swift */; };
 		1918DA8B2AAA7D4300456184 /* Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8A2AAA7D4300456184 /* Dessert.swift */; };
 		1918DA8D2AAA7E3E00456184 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8C2AAA7E3E00456184 /* Meal.swift */; };
+		1918DA8F2AAA80B300456184 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8E2AAA80B300456184 /* MealsViewModel.swift */; };
+		1918DA912AAA817700456184 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA902AAA817700456184 /* Constants.swift */; };
+		1918DA932AAA83FB00456184 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA922AAA83FB00456184 /* MealsView.swift */; };
+		1918DA952AAA85C500456184 /* DessertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA942AAA85C500456184 /* DessertsViewModel.swift */; };
+		1918DA972AAA873100456184 /* DessertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA962AAA873100456184 /* DessertsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 		1918DA882AAA6B5700456184 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1918DA8A2AAA7D4300456184 /* Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessert.swift; sourceTree = "<group>"; };
 		1918DA8C2AAA7E3E00456184 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		1918DA8E2AAA80B300456184 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
+		1918DA902AAA817700456184 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1918DA922AAA83FB00456184 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
+		1918DA942AAA85C500456184 /* DessertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsViewModel.swift; sourceTree = "<group>"; };
+		1918DA962AAA873100456184 /* DessertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1918DA8A2AAA7D4300456184 /* Dessert.swift */,
+				1918DA902AAA817700456184 /* Constants.swift */,
 				1918DA8C2AAA7E3E00456184 /* Meal.swift */,
 			);
 			path = Model;
@@ -155,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				1918DA532AAA5E6D00456184 /* ContentView.swift */,
+				1918DA922AAA83FB00456184 /* MealsView.swift */,
+				1918DA962AAA873100456184 /* DessertsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +175,8 @@
 		1918DA7D2AAA5EB300456184 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1918DA8E2AAA80B300456184 /* MealsViewModel.swift */,
+				1918DA942AAA85C500456184 /* DessertsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -317,9 +332,14 @@
 			files = (
 				1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */,
 				1918DA832AAA604400456184 /* APIServiceProtocol.swift in Sources */,
+				1918DA932AAA83FB00456184 /* MealsView.swift in Sources */,
+				1918DA952AAA85C500456184 /* DessertsViewModel.swift in Sources */,
 				1918DA8B2AAA7D4300456184 /* Dessert.swift in Sources */,
 				1918DA852AAA60BC00456184 /* APIService.swift in Sources */,
 				1918DA8D2AAA7E3E00456184 /* Meal.swift in Sources */,
+				1918DA912AAA817700456184 /* Constants.swift in Sources */,
+				1918DA8F2AAA80B300456184 /* MealsViewModel.swift in Sources */,
+				1918DA972AAA873100456184 /* DessertsView.swift in Sources */,
 				1918DA542AAA5E6D00456184 /* ContentView.swift in Sources */,
 				1918DA522AAA5E6D00456184 /* SugarRushApp.swift in Sources */,
 				1918DA872AAA671000456184 /* APIError.swift in Sources */,
