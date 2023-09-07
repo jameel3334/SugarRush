@@ -10,14 +10,14 @@ import Foundation
 
 class DessertsViewModel: ObservableObject {
     
-    static let shared = NetworkManager()
     @Published var fetchedDesserts: [Dessert] = []
     
     func fetchDessertData() {
-        let url = Constants.URL.dessertsURL
+        let url = Constants.Url.dessertsURL
         Task {
             do {
-                let data = try await DessertsViewModel.shared.service.fetchData(using: url, for: Desserts.self)
+                let data = try await NetworkManager.shared.service.fetchData(using: url, for: Desserts.self)
+                print(data)
                 Task { @MainActor in
                     self.fetchedDesserts = data.desserts
                 }

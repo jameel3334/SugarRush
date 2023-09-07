@@ -9,6 +9,9 @@ import Foundation
 
 struct Desserts: Codable {
     let desserts: [Dessert]
+    enum CodingKeys: String, CodingKey {
+        case desserts = "meals"
+    }
 }
 
 struct Dessert: Codable, Identifiable {

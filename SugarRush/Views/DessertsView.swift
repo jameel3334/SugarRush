@@ -13,11 +13,12 @@ struct DessertsView: View {
         NavigationView {
             List (viewModel.fetchedDesserts) { dessert in
                 NavigationLink(destination: MealsView(id: dessert.id),
-                               label:  { Text ("Hit it")} )
-                
+                               label:  { Text (dessert.title)} )
             }
+            .task { viewModel.fetchDessertData() }
         }
     }
 }
+
 
 

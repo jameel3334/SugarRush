@@ -9,9 +9,8 @@ import Foundation
 
 class MealsViewModel: ObservableObject {
     
-    static let shared = NetworkManager()
    @Published var fetchedMeals: [Meal] = []
-    let baseURL = Constants.URL.mealBaseURL
+    let baseURL = Constants.Url.mealBaseURL
     var id: String!
   
 
@@ -19,7 +18,7 @@ class MealsViewModel: ObservableObject {
         let url = "\(baseURL)\(id)"
         Task {
             do {
-                let data =  try await MealsViewModel.shared.service.fetchData(using: url, for: Meals.self)
+                let data =  try await NetworkManager.shared.service.fetchData(using: url, for: Meals.self)
                Task { @MainActor in
                     self.fetchedMeals = data.meals
                 }
