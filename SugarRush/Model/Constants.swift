@@ -41,5 +41,7 @@ enum Constants {
         public static let dessertsTitleName = "DESSERTS"
         public static let instructionTitle = "Instructions"
         public static let instrructionViewTitle = "Ingredients - Measurements"
+        public static let tapForIngredients = "Tap me for Ingredients"
+
     }
 }

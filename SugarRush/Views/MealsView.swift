@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MealsView: View {
     @ObservedObject var viewModel = MealsViewModel()
+    @State private var ingredientsIsShowing: Bool = false
     var id: String
     var body: some View {
         ZStack {
@@ -19,13 +20,16 @@ struct MealsView: View {
                     VStack {
                         DetailedImageView(imageURL: meal.image)
                             .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
-//                            .cornerRadius(Constants.Image.menuTileCornerRadius)
+                        //                            .cornerRadius(Constants.Image.menuTileCornerRadius)
                         Divider()
                         SubHeaderText(text: meal.title,
                                       multiTextAlignment: .trailing,
                                       horizontalFixedSize: false,
                                       verticalFixedSize: true)
                         .padding()
+                        Spacer()
+                        InfoButton(ingredientsIsShowing: $ingredientsIsShowing)
+                        Spacer()
                         Divider()
                         SubHeaderText(text: Constants.String.instructionTitle,
                                       multiTextAlignment: .center)
@@ -36,10 +40,30 @@ struct MealsView: View {
                                   verticalFixedSize: true)
                         .padding()
                     }
+                    .sheet(isPresented: $ingredientsIsShowing) {
+                        IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures)
+                    }
                 }
             }
             .task { viewModel.fetchMealsData(using: id) }
         }
+    }
+}
+
+struct InfoButton: View {
+    @Binding var ingredientsIsShowing: Bool
+    var body: some View {
+            Button(action: {
+                ingredientsIsShowing = true
+            }) {
+                HStack(spacing: nil){
+                    LabelText(text: Constants.String.tapForIngredients,
+                              multiTextAlignment: .trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    Image(systemName: "info.circle")
+                }
+                .padding(.horizontal, Constants.General.constraintsTopBottom)
+            }
     }
 }
 

@@ -128,14 +128,12 @@
 		1918DA502AAA5E6D00456184 /* SugarRush */ = {
 			isa = PBXGroup;
 			children = (
-				1918DA7B2AAA5EA300456184 /* Model */,
-				1918DA9F2AAA939100456184 /* Utilities */,
-				1918DA7C2AAA5EAA00456184 /* Views */,
-				1918DA7D2AAA5EB300456184 /* ViewModels */,
-				1918DA7E2AAA5EBD00456184 /* Networking */,
 				1918DA7F2AAA600400456184 /* App */,
-				1918DA552AAA5E7200456184 /* Assets.xcassets */,
-				1918DA572AAA5E7200456184 /* Preview Content */,
+				1918DA7E2AAA5EBD00456184 /* Networking */,
+				1918DA7B2AAA5EA300456184 /* Model */,
+				1918DA7D2AAA5EB300456184 /* ViewModels */,
+				1918DA7C2AAA5EAA00456184 /* Views */,
+				1918DA9F2AAA939100456184 /* Utilities */,
 			);
 			path = SugarRush;
 			sourceTree = "<group>";
@@ -169,8 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				1918DA8A2AAA7D4300456184 /* Dessert.swift */,
-				1918DA902AAA817700456184 /* Constants.swift */,
 				1918DA8C2AAA7E3E00456184 /* Meal.swift */,
+				1918DA902AAA817700456184 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				1918DA982AAA908F00456184 /* TabViews.swift */,
-				1918DA922AAA83FB00456184 /* MealsView.swift */,
 				1918DA962AAA873100456184 /* DessertsView.swift */,
+				1918DA922AAA83FB00456184 /* MealsView.swift */,
 				1918DAAA2AABC2BC00456184 /* IngredientsView.swift */,
 				1918DA9A2AAA916D00456184 /* Custom */,
 			);
@@ -211,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				1918DA512AAA5E6D00456184 /* SugarRushApp.swift */,
+				1918DA552AAA5E7200456184 /* Assets.xcassets */,
+				1918DA572AAA5E7200456184 /* Preview Content */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -540,15 +540,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SugarRush/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SugarRush/App/Preview Content\"";
 				DEVELOPMENT_TEAM = QQ68G99VDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -569,15 +569,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SugarRush/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SugarRush/App/Preview Content\"";
 				DEVELOPMENT_TEAM = QQ68G99VDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
