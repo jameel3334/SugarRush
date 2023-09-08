@@ -33,11 +33,13 @@ enum Constants {
         public static let leftSpoonAppImage = "leftSpoonStart"
         public static let menuTileHeightWidth: CGFloat = 80.0
         public static let menuTileCornerRadius: CGFloat = 12.0
-        public static let portraitViewImageDimensions: CGFloat = 350.0
+        public static let portraitViewImageDimensions: CGFloat = 400.0
         public static let landscapeViewImageDimensions: CGFloat = 200.0
-        public static let defaultMenuImage = "defaultMenuImage"
+        public static let mealPlaceholderImage = "mealPlaceholder"
     }
     enum String {
         public static let dessertsTitleName = "DESSERTS"
+        public static let instructionTitle = "Instructions"
+        public static let instrructionViewTitle = "Ingredients - Measurements"
     }
 }

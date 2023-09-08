@@ -19,7 +19,7 @@ struct MealsView: View {
                     VStack {
                         DetailedImageView(imageURL: meal.image)
                             .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
-                            .cornerRadius(Constants.Image.menuTileCornerRadius)
+//                            .cornerRadius(Constants.Image.menuTileCornerRadius)
                         Divider()
                         SubHeaderText(text: meal.title,
                                       multiTextAlignment: .trailing,
@@ -27,7 +27,7 @@ struct MealsView: View {
                                       verticalFixedSize: true)
                         .padding()
                         Divider()
-                        SubHeaderText(text: "Instructions",
+                        SubHeaderText(text: Constants.String.instructionTitle,
                                       multiTextAlignment: .center)
                         .padding()
                         LabelText(text: meal.instructions,
