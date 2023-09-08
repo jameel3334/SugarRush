@@ -30,6 +30,7 @@
 		1918DA9E2AAA91B500456184 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA9D2AAA91B500456184 /* TextViews.swift */; };
 		1918DAA32AAA943400456184 /* ListRowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAA22AAA943400456184 /* ListRowImageView.swift */; };
 		1918DAA52AAA945B00456184 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAA42AAA945B00456184 /* CacheAsyncImage.swift */; };
+		1918DAA72AABB07800456184 /* DetailedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAA62AABB07800456184 /* DetailedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		1918DA9D2AAA91B500456184 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		1918DAA22AAA943400456184 /* ListRowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowImageView.swift; sourceTree = "<group>"; };
 		1918DAA42AAA945B00456184 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		1918DAA62AABB07800456184 /* DetailedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			children = (
 				1918DA9B2AAA918500456184 /* ListRowView.swift */,
 				1918DAA22AAA943400456184 /* ListRowImageView.swift */,
+				1918DAA62AABB07800456184 /* DetailedImageView.swift */,
 				1918DA9D2AAA91B500456184 /* TextViews.swift */,
 			);
 			path = Custom;
@@ -375,6 +378,7 @@
 				1918DA8F2AAA80B300456184 /* MealsViewModel.swift in Sources */,
 				1918DA972AAA873100456184 /* DessertsView.swift in Sources */,
 				1918DA542AAA5E6D00456184 /* ContentView.swift in Sources */,
+				1918DAA72AABB07800456184 /* DetailedImageView.swift in Sources */,
 				1918DA9E2AAA91B500456184 /* TextViews.swift in Sources */,
 				1918DA522AAA5E6D00456184 /* SugarRushApp.swift in Sources */,
 				1918DA872AAA671000456184 /* APIError.swift in Sources */,

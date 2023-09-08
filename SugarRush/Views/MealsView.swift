@@ -11,8 +11,35 @@ struct MealsView: View {
     @ObservedObject var viewModel = MealsViewModel()
     var id: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(Constants.Color.accentColor).opacity(Constants.General.opacityBackground)
+                .ignoresSafeArea()
+            ScrollView {
+                ForEach(viewModel.fetchedMeals, id: \.id) { meal in
+                    VStack {
+                        DetailedImageView(imageURL: meal.image)
+                            .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
+                            .cornerRadius(Constants.Image.menuTileCornerRadius)
+                        Divider()
+                        SubHeaderText(text: meal.title,
+                                      multiTextAlignment: .trailing,
+                                      horizontalFixedSize: false,
+                                      verticalFixedSize: true)
+                        .padding()
+                        Divider()
+                        SubHeaderText(text: "Instructions",
+                                      multiTextAlignment: .center)
+                        .padding()
+                        LabelText(text: meal.instructions,
+                                  multiTextAlignment: .center,
+                                  horizontalFixedSize: false,
+                                  verticalFixedSize: true)
+                        .padding()
+                    }
+                }
+            }
+            .task { viewModel.fetchMealsData(using: id) }
+        }
     }
 }
-
 

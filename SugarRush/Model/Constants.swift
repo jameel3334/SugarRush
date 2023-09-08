@@ -18,15 +18,15 @@ enum Constants {
         public static let accentColor = "AccentColor"
     }
     enum General {
-        public static let roundedSymbolDimensions: CGFloat = 30.0
-        public static let roundedTextDimensions: CGFloat = 46.0
-        public static let constraintsLeftRight: CGFloat = 30.0
+//        public static let roundedSymbolDimensions: CGFloat = 30.0
+//        public static let roundedTextDimensions: CGFloat = 46.0
+//        public static let constraintsLeftRight: CGFloat = 30.0
         public static let constraintsTopBottom: CGFloat = 10.0
-        public static let roundedStrokeWidth: CGFloat = 3.0
-        public static let roundedBuyStrokeWidth: CGFloat = 6.0
-        public static let cornerRadius: CGFloat = 12.0
-        public static let greaterCornerRadius: CGFloat = 22.0
-        public static let opacityBackground: CGFloat = 0.3
+//        public static let roundedStrokeWidth: CGFloat = 3.0
+//        public static let roundedBuyStrokeWidth: CGFloat = 6.0
+//        public static let cornerRadius: CGFloat = 12.0
+//        public static let greaterCornerRadius: CGFloat = 22.0
+        public static let opacityBackground: CGFloat = 0.05
     }
     enum Image {
         public static let mobileAppImage = "mainStart"
