@@ -38,6 +38,7 @@
 		19F09A862AAC2833005D860C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA862AAA671000456184 /* APIError.swift */; };
 		19F09A872AAC2912005D860C /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DABC2AAC248900456184 /* JSONMapper.swift */; };
 		19F09A892AACCEE7005D860C /* FavoritesUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F09A882AACCEE7005D860C /* FavoritesUnitTest.swift */; };
+		19F09A8B2AACD011005D860C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F09A8A2AACD011005D860C /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		1918DAB92AAC154F00456184 /* Desserts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Desserts.json; sourceTree = "<group>"; };
 		1918DABC2AAC248900456184 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
 		19F09A882AACCEE7005D860C /* FavoritesUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUnitTest.swift; sourceTree = "<group>"; };
+		19F09A8A2AACD011005D860C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		1918DA7C2AAA5EAA00456184 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				19F09A8A2AACD011005D860C /* LaunchView.swift */,
 				1918DA982AAA908F00456184 /* TabViews.swift */,
 				1918DA962AAA873100456184 /* DessertsView.swift */,
 				1918DA922AAA83FB00456184 /* MealDetailView.swift */,
@@ -345,6 +348,7 @@
 				1918DA8B2AAA7D4300456184 /* Dessert.swift in Sources */,
 				1918DA852AAA60BC00456184 /* APIService.swift in Sources */,
 				1918DA8D2AAA7E3E00456184 /* Meal.swift in Sources */,
+				19F09A8B2AACD011005D860C /* LaunchView.swift in Sources */,
 				1918DA912AAA817700456184 /* Constants.swift in Sources */,
 				1918DAA32AAA943400456184 /* ListRowImageView.swift in Sources */,
 				1918DAAB2AABC2BC00456184 /* IngredientsView.swift in Sources */,

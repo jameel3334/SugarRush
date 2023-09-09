@@ -12,7 +12,7 @@ final class FavoritesUnitTest: XCTestCase {
     var favorite: FavoritesViewModel! 
     var meal: Meal!
     
-    override func setUpWithError() throws {
+    override func setUp() {
         favorite = FavoritesViewModel()
         meal = Meal(id: "",
                     title: "",
@@ -58,15 +58,16 @@ final class FavoritesUnitTest: XCTestCase {
                     measure18: nil,
                     measure19: nil,
                     measure20: nil)
+        favorite.addedItems.removeAll()
     }
     
-    func testAddToFavorites() throws {
+    func testAddToFavorites() {
         XCTAssertEqual(favorite.addedItems.count, 0)
         favorite.add(addedItem: meal)
         XCTAssertEqual(favorite.addedItems.count, 1)
     }
     
-    func testUndoFavorites() throws {
+    func testUndoFavorites() {
         favorite.add(addedItem: meal)
         XCTAssertEqual(favorite.addedItems.count, 1)
         favorite.undo(addedItem: meal)

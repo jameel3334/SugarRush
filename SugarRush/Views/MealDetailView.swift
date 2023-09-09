@@ -22,21 +22,22 @@ struct MealDetailView: View {
                         ImageView(viewType: .detailedImage, imageURL: meal.image)
                         Divider()
                         HeaderTextView(text: meal.title,
-                                      multiTextAlignment: .trailing,
-                                      horizontalFixedSize: false,
-                                      verticalFixedSize: true)
+                                       multiTextAlignment: .trailing,
+                                       horizontalFixedSize: false,
+                                       verticalFixedSize: true)
                         .padding()
                         Spacer()
                         InfoButton(ingredientsIsShowing: $ingredientsIsShowing)
+                            .padding()
                         Spacer()
                         Divider()
                         HeaderTextView(text: Constants.String.instructionTitle,
-                                      multiTextAlignment: .center)
+                                       multiTextAlignment: .center)
                         .padding()
                         BodyTextView(text: meal.instructions,
-                                  multiTextAlignment: .center,
-                                  horizontalFixedSize: false,
-                                  verticalFixedSize: true)
+                                     multiTextAlignment: .center,
+                                     horizontalFixedSize: false,
+                                     verticalFixedSize: true)
                         .padding()
                     }
                     .toolbar {
@@ -57,17 +58,17 @@ struct MealDetailView: View {
 struct InfoButton: View {
     @Binding var ingredientsIsShowing: Bool
     var body: some View {
-            Button(action: {
-                ingredientsIsShowing = true
-            }) {
-                HStack(spacing: nil){
-                    BodyTextView(text: Constants.String.tapForIngredients,
-                              multiTextAlignment: .trailing)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                    Image(systemName: "info.circle")
-                }
-                .padding(.horizontal, Constants.General.constraintsTopBottom)
+        Button(action: {
+            ingredientsIsShowing = true
+        }) {
+            HStack(spacing: nil){
+                BodyTextView(text: Constants.String.tapForIngredients,
+                             multiTextAlignment: .trailing)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                Image(systemName: "info.circle")
             }
+            .padding(.horizontal, Constants.General.constraintsTopBottom)
+        }
     }
 }
 
