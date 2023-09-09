@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FavoritesView: View {
     @EnvironmentObject var viewModel: FavoritesViewModel
+    @State private var showAlert = false
     var body: some View {
         NavigationView {
             Form {
@@ -30,5 +31,17 @@ struct FavoritesView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Alert"),
+                message: Text("No items added to favorites"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
+        .onAppear {
+            if viewModel.addedItems.count == 0 {
+                showAlert = true
+            }
+        }
     }
 }

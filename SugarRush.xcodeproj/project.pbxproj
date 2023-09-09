@@ -10,9 +10,7 @@
 		1918DA522AAA5E6D00456184 /* SugarRushApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA512AAA5E6D00456184 /* SugarRushApp.swift */; };
 		1918DA562AAA5E7200456184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1918DA552AAA5E7200456184 /* Assets.xcassets */; };
 		1918DA592AAA5E7200456184 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1918DA582AAA5E7200456184 /* Preview Assets.xcassets */; };
-		1918DA632AAA5E7300456184 /* SugarRushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA622AAA5E7300456184 /* SugarRushTests.swift */; };
-		1918DA6D2AAA5E7300456184 /* SugarRushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA6C2AAA5E7300456184 /* SugarRushUITests.swift */; };
-		1918DA6F2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA6E2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift */; };
+		1918DA632AAA5E7300456184 /* NetworkUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA622AAA5E7300456184 /* NetworkUnitTests.swift */; };
 		1918DA832AAA604400456184 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA822AAA604400456184 /* APIServiceProtocol.swift */; };
 		1918DA852AAA60BC00456184 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA842AAA60BC00456184 /* APIService.swift */; };
 		1918DA872AAA671000456184 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA862AAA671000456184 /* APIError.swift */; };
@@ -32,17 +30,17 @@
 		1918DAAB2AABC2BC00456184 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAAA2AABC2BC00456184 /* IngredientsView.swift */; };
 		1918DAAD2AABEB7600456184 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAAC2AABEB7600456184 /* FavoritesView.swift */; };
 		1918DAAF2AABEB9500456184 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAAE2AABEB9500456184 /* FavoritesViewModel.swift */; };
+		1918DAB42AAC11C400456184 /* MockAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAB32AAC11C400456184 /* MockAPIProtocol.swift */; };
+		1918DAB62AAC133500456184 /* MockAPIServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAB52AAC133500456184 /* MockAPIServiceManager.swift */; };
+		1918DABA2AAC175C00456184 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA822AAA604400456184 /* APIServiceProtocol.swift */; };
+		1918DABB2AAC1DBF00456184 /* Desserts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1918DAB92AAC154F00456184 /* Desserts.json */; };
+		1918DABE2AAC255E00456184 /* Desserts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1918DAB92AAC154F00456184 /* Desserts.json */; };
+		19F09A862AAC2833005D860C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA862AAA671000456184 /* APIError.swift */; };
+		19F09A872AAC2912005D860C /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DABC2AAC248900456184 /* JSONMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1918DA5F2AAA5E7300456184 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1918DA462AAA5E6C00456184 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1918DA4D2AAA5E6D00456184;
-			remoteInfo = SugarRush;
-		};
-		1918DA692AAA5E7300456184 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1918DA462AAA5E6C00456184 /* Project object */;
 			proxyType = 1;
@@ -57,10 +55,7 @@
 		1918DA552AAA5E7200456184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1918DA582AAA5E7200456184 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1918DA5E2AAA5E7300456184 /* SugarRushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarRushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1918DA622AAA5E7300456184 /* SugarRushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarRushTests.swift; sourceTree = "<group>"; };
-		1918DA682AAA5E7300456184 /* SugarRushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarRushUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1918DA6C2AAA5E7300456184 /* SugarRushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarRushUITests.swift; sourceTree = "<group>"; };
-		1918DA6E2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarRushUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1918DA622AAA5E7300456184 /* NetworkUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUnitTests.swift; sourceTree = "<group>"; };
 		1918DA822AAA604400456184 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
 		1918DA842AAA60BC00456184 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1918DA862AAA671000456184 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -80,6 +75,10 @@
 		1918DAAA2AABC2BC00456184 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		1918DAAC2AABEB7600456184 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		1918DAAE2AABEB9500456184 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		1918DAB32AAC11C400456184 /* MockAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIProtocol.swift; sourceTree = "<group>"; };
+		1918DAB52AAC133500456184 /* MockAPIServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIServiceManager.swift; sourceTree = "<group>"; };
+		1918DAB92AAC154F00456184 /* Desserts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Desserts.json; sourceTree = "<group>"; };
+		1918DABC2AAC248900456184 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,13 +96,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1918DA652AAA5E7300456184 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,7 +104,6 @@
 			children = (
 				1918DA502AAA5E6D00456184 /* SugarRush */,
 				1918DA612AAA5E7300456184 /* SugarRushTests */,
-				1918DA6B2AAA5E7300456184 /* SugarRushUITests */,
 				1918DA4F2AAA5E6D00456184 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,7 +113,6 @@
 			children = (
 				1918DA4E2AAA5E6D00456184 /* SugarRush.app */,
 				1918DA5E2AAA5E7300456184 /* SugarRushTests.xctest */,
-				1918DA682AAA5E7300456184 /* SugarRushUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,18 +141,11 @@
 		1918DA612AAA5E7300456184 /* SugarRushTests */ = {
 			isa = PBXGroup;
 			children = (
-				1918DA622AAA5E7300456184 /* SugarRushTests.swift */,
+				1918DA622AAA5E7300456184 /* NetworkUnitTests.swift */,
+				1918DAB92AAC154F00456184 /* Desserts.json */,
+				1918DAB22AAC11A900456184 /* MockServer */,
 			);
 			path = SugarRushTests;
-			sourceTree = "<group>";
-		};
-		1918DA6B2AAA5E7300456184 /* SugarRushUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1918DA6C2AAA5E7300456184 /* SugarRushUITests.swift */,
-				1918DA6E2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift */,
-			);
-			path = SugarRushUITests;
 			sourceTree = "<group>";
 		};
 		1918DA7B2AAA5EA300456184 /* Model */ = {
@@ -237,6 +220,16 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		1918DAB22AAC11A900456184 /* MockServer */ = {
+			isa = PBXGroup;
+			children = (
+				1918DABC2AAC248900456184 /* JSONMapper.swift */,
+				1918DAB32AAC11C400456184 /* MockAPIProtocol.swift */,
+				1918DAB52AAC133500456184 /* MockAPIServiceManager.swift */,
+			);
+			path = MockServer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,24 +268,6 @@
 			productReference = 1918DA5E2AAA5E7300456184 /* SugarRushTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1918DA672AAA5E7300456184 /* SugarRushUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1918DA782AAA5E7300456184 /* Build configuration list for PBXNativeTarget "SugarRushUITests" */;
-			buildPhases = (
-				1918DA642AAA5E7300456184 /* Sources */,
-				1918DA652AAA5E7300456184 /* Frameworks */,
-				1918DA662AAA5E7300456184 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1918DA6A2AAA5E7300456184 /* PBXTargetDependency */,
-			);
-			name = SugarRushUITests;
-			productName = SugarRushUITests;
-			productReference = 1918DA682AAA5E7300456184 /* SugarRushUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -307,10 +282,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					1918DA5D2AAA5E7300456184 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 1918DA4D2AAA5E6D00456184;
-					};
-					1918DA672AAA5E7300456184 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 1918DA4D2AAA5E6D00456184;
 					};
@@ -331,7 +302,6 @@
 			targets = (
 				1918DA4D2AAA5E6D00456184 /* SugarRush */,
 				1918DA5D2AAA5E7300456184 /* SugarRushTests */,
-				1918DA672AAA5E7300456184 /* SugarRushUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1918DA592AAA5E7200456184 /* Preview Assets.xcassets in Resources */,
+				1918DABE2AAC255E00456184 /* Desserts.json in Resources */,
 				1918DA562AAA5E7200456184 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,13 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1918DA662AAA5E7300456184 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1918DABB2AAC1DBF00456184 /* Desserts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,16 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1918DA632AAA5E7300456184 /* SugarRushTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1918DA642AAA5E7300456184 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1918DA6D2AAA5E7300456184 /* SugarRushUITests.swift in Sources */,
-				1918DA6F2AAA5E7300456184 /* SugarRushUITestsLaunchTests.swift in Sources */,
+				1918DAB62AAC133500456184 /* MockAPIServiceManager.swift in Sources */,
+				1918DAB42AAC11C400456184 /* MockAPIProtocol.swift in Sources */,
+				19F09A872AAC2912005D860C /* JSONMapper.swift in Sources */,
+				1918DABA2AAC175C00456184 /* APIServiceProtocol.swift in Sources */,
+				19F09A862AAC2833005D860C /* APIError.swift in Sources */,
+				1918DA632AAA5E7300456184 /* NetworkUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,11 +375,6 @@
 			isa = PBXTargetDependency;
 			target = 1918DA4D2AAA5E6D00456184 /* SugarRush */;
 			targetProxy = 1918DA5F2AAA5E7300456184 /* PBXContainerItemProxy */;
-		};
-		1918DA6A2AAA5E7300456184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1918DA4D2AAA5E6D00456184 /* SugarRush */;
-			targetProxy = 1918DA692AAA5E7300456184 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -635,42 +591,6 @@
 			};
 			name = Release;
 		};
-		1918DA792AAA5E7300456184 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QQ68G99VDN;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.jameel.SugarRushUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SugarRush;
-			};
-			name = Debug;
-		};
-		1918DA7A2AAA5E7300456184 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QQ68G99VDN;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.jameel.SugarRushUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SugarRush;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -697,15 +617,6 @@
 			buildConfigurations = (
 				1918DA762AAA5E7300456184 /* Debug */,
 				1918DA772AAA5E7300456184 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1918DA782AAA5E7300456184 /* Build configuration list for PBXNativeTarget "SugarRushUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1918DA792AAA5E7300456184 /* Debug */,
-				1918DA7A2AAA5E7300456184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

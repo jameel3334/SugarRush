@@ -20,7 +20,6 @@ struct MealDetailView: View {
                 ForEach(viewModel.fetchedMeals, id: \.id) { meal in
                     VStack {
                         ImageView(viewType: .detailedImage, imageURL: meal.image)
-                            .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
                         Divider()
                         HeaderTextView(text: meal.title,
                                       multiTextAlignment: .trailing,

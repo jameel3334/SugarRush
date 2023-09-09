@@ -7,6 +7,12 @@
 
 import Foundation
 
+extension Desserts: Equatable {
+    static func == (lhs: Desserts, rhs: Desserts) -> Bool {
+        return lhs.desserts == rhs.desserts
+    }
+}
+
 struct Desserts: Codable {
     let desserts: [Dessert]
     enum CodingKeys: String, CodingKey {
@@ -14,7 +20,7 @@ struct Desserts: Codable {
     }
 }
 
-struct Dessert: Codable, Identifiable {
+struct Dessert: Codable, Identifiable, Equatable {
     let title: String
     let image: String
     let id: String
