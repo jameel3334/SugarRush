@@ -12,7 +12,7 @@ struct ListRowView: View {
     let title: String
     var body: some View {
         HStack {
-            ListRowImageView(imageURL: imageURL)
+            ImageView(viewType: .listRowImage, imageURL: imageURL)
                 .frame(width: Constants.Image.menuTileHeightWidth, height: Constants.Image.menuTileHeightWidth)
                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                 .padding(.vertical, Constants.General.constraintsTopBottom)

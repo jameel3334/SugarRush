@@ -19,7 +19,7 @@ struct MealDetailView: View {
             ScrollView {
                 ForEach(viewModel.fetchedMeals, id: \.id) { meal in
                     VStack {
-                        DetailedImageView(imageURL: meal.image)
+                        ImageView(viewType: .detailedImage, imageURL: meal.image)
                             .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
                         Divider()
                         HeaderTextView(text: meal.title,
