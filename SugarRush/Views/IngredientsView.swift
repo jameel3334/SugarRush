@@ -11,7 +11,7 @@ struct IngredientsView: View {
     var ingredientsAndMeasures: [String]
     var body: some View {
         VStack {
-            SubHeaderText(text: Constants.String.instrructionViewTitle,
+            HeaderTextView(text: Constants.String.instrructionViewTitle,
                           multiTextAlignment: .center)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding()

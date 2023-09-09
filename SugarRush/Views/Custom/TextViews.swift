@@ -11,13 +11,13 @@ import SwiftUI
 struct TextViews: View {
     var body: some View {
         VStack {
-            SubHeaderText(text: "Hello!", multiTextAlignment: .trailing)
-            LabelText(text: "Hello!", multiTextAlignment: .center)
+            HeaderTextView(text: "Hello!", multiTextAlignment: .trailing)
+            BodyTextView(text: "Hello!", multiTextAlignment: .center)
         }
     }
 }
 
-struct SubHeaderText: View {
+struct HeaderTextView: View {
     var text: String
     var multiTextAlignment: TextAlignment
     var horizontalFixedSize: Bool?
@@ -34,7 +34,7 @@ struct SubHeaderText: View {
     }
 }
 
-struct LabelText: View {
+struct BodyTextView: View {
     var text: String
     var multiTextAlignment: TextAlignment
     var horizontalFixedSize: Bool?

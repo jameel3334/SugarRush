@@ -16,7 +16,7 @@ struct ListRowView: View {
                 .frame(width: Constants.Image.menuTileHeightWidth, height: Constants.Image.menuTileHeightWidth)
                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                 .padding(.vertical, Constants.General.constraintsTopBottom)
-            SubHeaderText(text: title,
+            HeaderTextView(text: title,
                           multiTextAlignment: .leading)
                 .padding( Constants.General.constraintsTopBottom)
         }

@@ -21,7 +21,7 @@
 		1918DA8D2AAA7E3E00456184 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8C2AAA7E3E00456184 /* Meal.swift */; };
 		1918DA8F2AAA80B300456184 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA8E2AAA80B300456184 /* MealsViewModel.swift */; };
 		1918DA912AAA817700456184 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA902AAA817700456184 /* Constants.swift */; };
-		1918DA932AAA83FB00456184 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA922AAA83FB00456184 /* MealsView.swift */; };
+		1918DA932AAA83FB00456184 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA922AAA83FB00456184 /* MealDetailView.swift */; };
 		1918DA952AAA85C500456184 /* DessertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA942AAA85C500456184 /* DessertsViewModel.swift */; };
 		1918DA972AAA873100456184 /* DessertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA962AAA873100456184 /* DessertsView.swift */; };
 		1918DA992AAA908F00456184 /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA982AAA908F00456184 /* TabViews.swift */; };
@@ -31,6 +31,8 @@
 		1918DAA52AAA945B00456184 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAA42AAA945B00456184 /* CacheAsyncImage.swift */; };
 		1918DAA72AABB07800456184 /* DetailedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAA62AABB07800456184 /* DetailedImageView.swift */; };
 		1918DAAB2AABC2BC00456184 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAAA2AABC2BC00456184 /* IngredientsView.swift */; };
+		1918DAAD2AABEB7600456184 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAAC2AABEB7600456184 /* FavoritesView.swift */; };
+		1918DAAF2AABEB9500456184 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DAAE2AABEB9500456184 /* FavoritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,7 @@
 		1918DA8C2AAA7E3E00456184 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		1918DA8E2AAA80B300456184 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		1918DA902AAA817700456184 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1918DA922AAA83FB00456184 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
+		1918DA922AAA83FB00456184 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		1918DA942AAA85C500456184 /* DessertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsViewModel.swift; sourceTree = "<group>"; };
 		1918DA962AAA873100456184 /* DessertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsView.swift; sourceTree = "<group>"; };
 		1918DA982AAA908F00456184 /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		1918DAA42AAA945B00456184 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		1918DAA62AABB07800456184 /* DetailedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedImageView.swift; sourceTree = "<group>"; };
 		1918DAAA2AABC2BC00456184 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
+		1918DAAC2AABEB7600456184 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		1918DAAE2AABEB9500456184 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +182,9 @@
 			children = (
 				1918DA982AAA908F00456184 /* TabViews.swift */,
 				1918DA962AAA873100456184 /* DessertsView.swift */,
-				1918DA922AAA83FB00456184 /* MealsView.swift */,
+				1918DA922AAA83FB00456184 /* MealDetailView.swift */,
 				1918DAAA2AABC2BC00456184 /* IngredientsView.swift */,
+				1918DAAC2AABEB7600456184 /* FavoritesView.swift */,
 				1918DA9A2AAA916D00456184 /* Custom */,
 			);
 			path = Views;
@@ -190,6 +195,7 @@
 			children = (
 				1918DA8E2AAA80B300456184 /* MealsViewModel.swift */,
 				1918DA942AAA85C500456184 /* DessertsViewModel.swift */,
+				1918DAAE2AABEB9500456184 /* FavoritesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -364,10 +370,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1918DAAD2AABEB7600456184 /* FavoritesView.swift in Sources */,
 				1918DA892AAA6B5700456184 /* NetworkManager.swift in Sources */,
 				1918DA832AAA604400456184 /* APIServiceProtocol.swift in Sources */,
 				1918DA9C2AAA918500456184 /* ListRowView.swift in Sources */,
-				1918DA932AAA83FB00456184 /* MealsView.swift in Sources */,
+				1918DA932AAA83FB00456184 /* MealDetailView.swift in Sources */,
 				1918DA952AAA85C500456184 /* DessertsViewModel.swift in Sources */,
 				1918DA992AAA908F00456184 /* TabViews.swift in Sources */,
 				1918DA8B2AAA7D4300456184 /* Dessert.swift in Sources */,
@@ -378,6 +385,7 @@
 				1918DAAB2AABC2BC00456184 /* IngredientsView.swift in Sources */,
 				1918DA8F2AAA80B300456184 /* MealsViewModel.swift in Sources */,
 				1918DA972AAA873100456184 /* DessertsView.swift in Sources */,
+				1918DAAF2AABEB9500456184 /* FavoritesViewModel.swift in Sources */,
 				1918DAA72AABB07800456184 /* DetailedImageView.swift in Sources */,
 				1918DA9E2AAA91B500456184 /* TextViews.swift in Sources */,
 				1918DA522AAA5E6D00456184 /* SugarRushApp.swift in Sources */,

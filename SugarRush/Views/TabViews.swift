@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabViews: View {
+    @EnvironmentObject var viewModel: FavoritesViewModel
     var body: some View {
         TabView {
             DessertsView()
@@ -16,6 +17,13 @@ struct TabViews: View {
                     Text("Menu")
                 }
                 .tag(0)
+            FavoritesView()
+                .tabItem {
+                    Image(systemName: "heart")
+                    Text("Favorite")
+                }
+                .tag(1)
+                .badge(viewModel.addedItems.count)
         }
     }
 }
