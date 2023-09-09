@@ -37,6 +37,7 @@
 		1918DABE2AAC255E00456184 /* Desserts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1918DAB92AAC154F00456184 /* Desserts.json */; };
 		19F09A862AAC2833005D860C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DA862AAA671000456184 /* APIError.swift */; };
 		19F09A872AAC2912005D860C /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918DABC2AAC248900456184 /* JSONMapper.swift */; };
+		19F09A892AACCEE7005D860C /* FavoritesUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F09A882AACCEE7005D860C /* FavoritesUnitTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		1918DAB52AAC133500456184 /* MockAPIServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIServiceManager.swift; sourceTree = "<group>"; };
 		1918DAB92AAC154F00456184 /* Desserts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Desserts.json; sourceTree = "<group>"; };
 		1918DABC2AAC248900456184 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
+		19F09A882AACCEE7005D860C /* FavoritesUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUnitTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1918DA622AAA5E7300456184 /* NetworkUnitTests.swift */,
+				19F09A882AACCEE7005D860C /* FavoritesUnitTest.swift */,
 				1918DAB92AAC154F00456184 /* Desserts.json */,
 				1918DAB22AAC11A900456184 /* MockServer */,
 			);
@@ -361,6 +364,7 @@
 			files = (
 				1918DAB62AAC133500456184 /* MockAPIServiceManager.swift in Sources */,
 				1918DAB42AAC11C400456184 /* MockAPIProtocol.swift in Sources */,
+				19F09A892AACCEE7005D860C /* FavoritesUnitTest.swift in Sources */,
 				19F09A872AAC2912005D860C /* JSONMapper.swift in Sources */,
 				1918DABA2AAC175C00456184 /* APIServiceProtocol.swift in Sources */,
 				19F09A862AAC2833005D860C /* APIError.swift in Sources */,
