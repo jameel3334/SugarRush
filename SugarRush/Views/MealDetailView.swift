@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct MealDetailView: View {
-    @ObservedObject var viewModel = MealsViewModel()
-    @State private var ingredientsIsShowing: Bool = false
-    @State private var isFavorite = false
+    @ObservedObject var viewModel           = MealsViewModel()
+    @State private var ingredientsIsShowing = false
+    @State private var isFavorite           = false
+    @State var mealAlertIsShowing               = false
+    
     var id: String
     var body: some View {
         ZStack {
@@ -50,10 +52,24 @@ struct MealDetailView: View {
                     }
                 }
             }
-            .task { viewModel.fetchMealsData(using: id) }
+            .task {
+                do {
+                    try await viewModel.fetchMealsData(using: id)
+                } catch {
+                    mealAlertIsShowing = true
+                }
+            }
+            .alert(isPresented: $mealAlertIsShowing) {
+                Alert(
+                    title: Text(Constants.String.alertTitle),
+                    message: Text(Constants.String.alertMessage),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }
+
 
 struct InfoButton: View {
     @Binding var ingredientsIsShowing: Bool
@@ -71,6 +87,7 @@ struct InfoButton: View {
         }
     }
 }
+
 
 struct AddToFavorite: View {
     @EnvironmentObject var viewModel: FavoritesViewModel

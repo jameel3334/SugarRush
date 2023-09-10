@@ -35,5 +35,7 @@ enum Constants {
         public static let instructionTitle      = "Instructions"
         public static let instrructionViewTitle = "Ingredients - Measurements"
         public static let tapForIngredients     = "Tap me for Ingredients"
+        public static let alertTitle            = "Something went wrong"
+        public static let alertMessage          = "Unable to complete your request, Please try again later"
     }
 }

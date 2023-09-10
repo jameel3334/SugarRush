@@ -9,21 +9,19 @@ import Foundation
 
 class MealsViewModel: ObservableObject {
     
-   @Published var fetchedMeals: [Meal] = []
+    @Published var fetchedMeals: [Meal] = []
     let baseURL = Constants.Url.mealBaseURL
     var id: String!
-  
-     func fetchMealsData(using id: String) {
+    
+    func fetchMealsData(using id: String) async throws {
         let url = "\(baseURL)\(id)"
-        Task {
-            do {
-                let data =  try await NetworkManager.shared.service.fetchData(using: url, for: Meals.self)
-               Task { @MainActor in
-                    self.fetchedMeals = data.meals
-                }
-            } catch {
-                throw APIError.invalidData
+        do {
+            let data =  try await NetworkManager.shared.service.fetchData(using: url, for: Meals.self)
+            Task { @MainActor in
+                self.fetchedMeals = data.meals
             }
+        } catch {
+            throw APIError.invalidData
         }
     }
 }

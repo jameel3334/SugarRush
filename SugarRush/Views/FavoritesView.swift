@@ -33,7 +33,7 @@ struct FavoritesView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Alert"),
+                title: Text("Opps!"),
                 message: Text("No items added to favorites"),
                 dismissButton: .default(Text("OK"))
             )

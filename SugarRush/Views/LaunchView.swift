@@ -9,10 +9,12 @@ import SwiftUI
 
 struct LaunchView: View {
     @State private var launchScreenIsShowing = true
-    @State private var bounceLogo = false
-    @State private var size = 0.5
-    @State private var opacity = 0.5
-    private let timer = Timer.publish(every: 0.75, on: .main, in: .common).autoconnect()
+    @State private var bounceLogo            = false
+    @State private var size                  = 0.5
+    @State private var opacity               = 0.5
+    private let timer                        = Timer.publish(every: 0.75,
+                                                             on: .main,
+                                                             in: .common).autoconnect()
     var body: some View {
         if launchScreenIsShowing {
             ZStack {

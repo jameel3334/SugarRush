@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct DessertsView: View {
-    @StateObject var viewModel = DessertsViewModel()
+    @StateObject var viewModel       = DessertsViewModel()
+    @State var dessertAlertIsShowing = false
     var body: some View {
         NavigationView {
             List (viewModel.fetchedDesserts.sorted(by: { $0.title < $1.title })) { dessert in
@@ -19,9 +20,21 @@ struct DessertsView: View {
                                 title: dessert.title)
                 })
             }
-            .task { viewModel.fetchDessertData() }
             .navigationBarTitle(Constants.String.dessertsTitle)
             .navigationBarTitleDisplayMode(.large)
+            .task {
+                do {
+                    try await viewModel.fetchDessertData()
+                } catch {
+                    dessertAlertIsShowing = true
+                }}
+            .alert(isPresented: $dessertAlertIsShowing) {
+                Alert(
+                    title: Text(Constants.String.alertTitle),
+                    message: Text(Constants.String.alertMessage),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }

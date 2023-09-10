@@ -5,16 +5,14 @@
 //  Created by Mohammed Jameeluddin on 9/7/23.
 //
 
-import Foundation
-
+import SwiftUI
 
 class DessertsViewModel: ObservableObject {
     
     @Published var fetchedDesserts: [Dessert] = []
     
-    func fetchDessertData() {
+    func fetchDessertData() async throws {
         let url = Constants.Url.dessertsURL
-        Task {
             do {
                 let data = try await NetworkManager.shared.service.fetchData(using: url, for: Desserts.self)
                 Task { @MainActor in
@@ -25,4 +23,4 @@ class DessertsViewModel: ObservableObject {
             }
         }
     }
-}
+

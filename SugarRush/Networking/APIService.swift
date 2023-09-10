@@ -17,8 +17,11 @@ struct APIService: APIServiceProtocol {
         guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode) else {
             throw APIError.invalidResponse
         }
-        let fetchedData:T = try JSONDecoder().decode(T.self, from: data)
-        return fetchedData
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            throw APIError.invalidData
+        }
     }
 }
 
