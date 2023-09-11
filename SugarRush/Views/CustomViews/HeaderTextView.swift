@@ -13,10 +13,13 @@ struct HeaderTextView: View {
     var horizontalFixedSize: Bool?
     var verticalFixedSize: Bool?
     var color: Color?
+    var font: Font?
     var body: some View {
         Text(text.uppercased())
             .foregroundColor(color)
-            .font(.title3.weight(.bold))
+            .font(font ?? .title3)
+            .bold()
+            .minimumScaleFactor(0.6)
             .lineLimit(1)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(multiTextAlignment)

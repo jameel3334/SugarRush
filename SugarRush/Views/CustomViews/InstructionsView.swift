@@ -13,9 +13,8 @@ struct InstructionsView: View {
     
     var body: some View {
         HeaderTextView(text: Constants.String.instructionViewTitle,
-                       multiTextAlignment: .center,
+                       multiTextAlignment: .leading,
                        color: Color(Constants.Color.textColor))
-        Divider()
         BodyTextView(text: text,
                      multiTextAlignment: .leading)
     }

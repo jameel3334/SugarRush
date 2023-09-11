@@ -1,5 +1,5 @@
 //
-//  MealsViewModel.swift
+//  MealViewModel.swift
 //  SugarRush
 //
 //  Created by Mohammed Jameeluddin on 9/7/23.
@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-class MealsViewModel: ObservableObject {
+class MealViewModel: ObservableObject {
     
-    @Published var fetchedMeals: [Meal] = []
+    @Published var fetchedMeal: Meal?
     let baseURL = Constants.Url.mealBaseURL
     
     func fetchMealsData(using id: String) async throws {
         let url = "\(baseURL)\(id)"
         do {
             let data =  try await NetworkManager.shared.service.fetchData(using: url, for: Meals.self)
+                guard let meal = data.meals.first else {
+                    throw APIError.invalidResponse
+                }
             Task { @MainActor in
-                self.fetchedMeals = data.meals
+                fetchedMeal = meal
             }
         } catch {
             throw APIError.invalidData

@@ -14,11 +14,11 @@ struct IngredientsView: View {
     var body: some View {
         VStack(spacing: 10){
             HeaderTextView(text: Constants.String.ingredientsViewTitle,
-                           multiTextAlignment: .center,
+                           multiTextAlignment: .leading,
                            color: Color(Constants.Color.textColor))
             Divider()
             ForEach(text, id: \.self) { item in
-                BodyTextView(text: item, multiTextAlignment: .leading)
+                BodyTextView(text: item, multiTextAlignment: .center)
             }
         }
     }

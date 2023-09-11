@@ -9,26 +9,25 @@ import SwiftUI
 
 struct DetailedItemView: View {
     
-    @ObservedObject var viewModel = MealsViewModel()
-    @State private var ingredientsIsShowing = false
+    @ObservedObject var viewModel = MealViewModel()
     @State private var isFavorite           = false
     @State private var mealAlertIsShowing   = false
     var id: String
     
     var body: some View {
         ScrollView {
-            ForEach(viewModel.fetchedMeals, id: \.id) { meal in
+            if let meal = viewModel.fetchedMeal {
                 VStack {
                     ImageView(imageURL: meal.imageURL)
                         .overlay(
                             HeaderTextView(text: meal.title,
                                            multiTextAlignment: .leading,
-                                           color: .white)
+                                           color: .white,
+                                           font: .title)
                             .shadow(color: .black, radius: 1)
                             .offset(y: 170)
                             .padding()
                         )
-                    Divider()
                     IngredientsView(text: meal.ingredientsAndMeasures)
                         .padding()
                     Divider()
