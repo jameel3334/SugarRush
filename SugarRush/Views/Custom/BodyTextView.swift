@@ -14,7 +14,6 @@ struct BodyTextView: View {
     var horizontalFixedSize: Bool?
     var verticalFixedSize: Bool?
     var body: some View {
-        
         Text(text)
             .fontWeight(.regular)
             .lineSpacing(10)

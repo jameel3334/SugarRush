@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DessertsListView: View {
     
-    @StateObject var viewModel       = DessertsViewModel()
+    @StateObject var viewModel = DessertsViewModel()
     @State var showAlert = false
     
     var body: some View {

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct IngredientsView: View {
+    
     var text: [String]
+    
     var body: some View {
         VStack(spacing: 10){
             HeaderTextView(text: Constants.String.ingredientsViewTitle,
                            multiTextAlignment: .center,
                            color: Color(Constants.Color.textColor))
-            .padding()
+            Divider()
             ForEach(text, id: \.self) { item in
                 BodyTextView(text: item, multiTextAlignment: .leading)
             }

@@ -28,17 +28,12 @@ struct DetailedItemView: View {
                             .offset(y: 170)
                             .padding()
                         )
-                    
+                    Divider()
                     IngredientsView(text: meal.ingredientsAndMeasures)
                         .padding()
-                    
+                    Divider()
                     InstructionsView(text: meal.instructions)
                         .padding()
-                }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        AddToFavoriteView(isFavorite: $isFavorite, meal: meal)
-                    }
                 }
             }
         }
@@ -56,7 +51,6 @@ struct DetailedItemView: View {
                 message: Text(Constants.String.alertMessage),
                 dismissButton: .default(Text("OK"))
             )}
-        
     }
 }
 

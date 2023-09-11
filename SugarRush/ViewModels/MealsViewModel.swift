@@ -5,7 +5,7 @@
 //  Created by Mohammed Jameeluddin on 9/7/23.
 //
 
-import Foundation
+import SwiftUI
 
 class MealsViewModel: ObservableObject {
     

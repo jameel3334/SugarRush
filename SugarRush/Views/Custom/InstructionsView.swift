@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct InstructionsView: View {
+    
     public var text: String
+    
     var body: some View {
         HeaderTextView(text: Constants.String.instructionViewTitle,
-                       multiTextAlignment: .leading,
+                       multiTextAlignment: .center,
                        color: Color(Constants.Color.textColor))
-        .padding()
+        Divider()
         BodyTextView(text: text,
-                     multiTextAlignment: .leading,
-                     horizontalFixedSize: false,
-                     verticalFixedSize: true)
+                     multiTextAlignment: .leading)
     }
 }
 
