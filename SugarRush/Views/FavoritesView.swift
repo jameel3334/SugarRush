@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    
     @EnvironmentObject var viewModel: FavoritesViewModel
     @State private var showAlert = false
+    
     var body: some View {
         NavigationView {
             Form {
                 ForEach(viewModel.addedItems, id: \.id) { meal in
-                    NavigationLink(
-                        destination:
-                            MealDetailView(id: meal.id)
-                        ,
+                    NavigationLink(destination: DetailedItemView(id: meal.id),
                         label: {
-                            ListRowView(imageURL: meal.image, title: meal.title)
+                            ListRowView(imageURL: meal.imageURL, title: meal.title)
                         })
                 }
                 .onDelete(perform: viewModel.remove)
             }
+            .formStyle(.grouped)
             .navigationBarTitle(Constants.String.favoritesTitle)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
@@ -43,5 +43,11 @@ struct FavoritesView: View {
                 showAlert = true
             }
         }
+    }
+}
+
+struct FavoritesView_Preview: PreviewProvider {
+    static var previews: some View {
+        FavoritesView()
     }
 }

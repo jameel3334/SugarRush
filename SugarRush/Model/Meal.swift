@@ -15,7 +15,7 @@ struct Meal: Codable, Identifiable {
     let id: String
     let title: String
     let instructions: String
-    let image: String
+    let imageURL: String
     let ingredient1: String?
     let ingredient2: String?
     let ingredient3: String?
@@ -61,7 +61,7 @@ struct Meal: Codable, Identifiable {
         case id           = "idMeal"
         case title        = "strMeal"
         case instructions = "strInstructions"
-        case image        = "strMealThumb"
+        case imageURL     = "strMealThumb"
         case ingredient1  = "strIngredient1"
         case ingredient2  = "strIngredient2"
         case ingredient3  = "strIngredient3"
@@ -106,6 +106,7 @@ struct Meal: Codable, Identifiable {
 }
 
 extension Meal {
+    // MARK: Helper to pair Ingredients & Measures
     var ingredientsAndMeasures: [String] {
         let mirror = Mirror(reflecting: self)
         var ingredientsAndMeasures = [String]()
@@ -120,5 +121,3 @@ extension Meal {
         return ingredientsAndMeasures
     }
 }
-
-

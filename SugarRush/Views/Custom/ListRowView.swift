@@ -1,24 +1,43 @@
 //
-//  ListRowView.swift
+//  RowComponentView.swift
 //  SugarRush
 //
-//  Created by Mohammed Jameeluddin on 9/7/23.
+//  Created by Mohammed Jameeluddin on 9/10/23.
 //
 
 import SwiftUI
 
 struct ListRowView: View {
-    let imageURL: String
-    let title: String
+    
+    var imageURL: String
+    var title: String
+    
     var body: some View {
-        HStack {
-            ImageView(viewType: .listRowImage, imageURL: imageURL)
-                .frame(width: Constants.Image.menuTileHeightWidth, height: Constants.Image.menuTileHeightWidth)
-                .cornerRadius(Constants.Image.menuTileCornerRadius)
-                .padding(.vertical, Constants.General.constraintsTopBottom)
-            HeaderTextView(text: title,
-                          multiTextAlignment: .leading)
-                .padding( Constants.General.constraintsTopBottom)
-        }
+        HeaderTextView(text: title,
+                       multiTextAlignment: .leading,
+                       color: .white)
+            .shadow(color: .black, radius: 1)
+            .minimumScaleFactor(0.7)
+            .padding(EdgeInsets(top: 35, leading: 10, bottom: 35, trailing: 0))
+            .offset(y: 20)
+            .background(
+                ImageView(imageURL: imageURL)
+                    .opacity(0.5)
+                    .scaledToFill()
+            )
+            .background(
+                Color.gray
+            )
+            .mask(
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+            )
     }
 }
+
+struct RowComponentView_Preview: PreviewProvider {
+    static var previews: some View {
+        ListRowView(imageURL: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg",
+                         title: "Apple")
+    }
+}
+

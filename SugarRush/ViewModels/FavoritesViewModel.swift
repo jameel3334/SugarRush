@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 class FavoritesViewModel: ObservableObject {
     
     @Published var addedItems = [Meal]()

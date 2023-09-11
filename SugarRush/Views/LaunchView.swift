@@ -8,40 +8,38 @@
 import SwiftUI
 
 struct LaunchView: View {
+    
     @State private var launchScreenIsShowing = true
-    @State private var bounceLogo            = false
-    @State private var size                  = 0.5
-    @State private var opacity               = 0.5
-    private let timer                        = Timer.publish(every: 0.75,
-                                                             on: .main,
-                                                             in: .common).autoconnect()
+    @State private var size                  = 0.75
+    @State private var opacity               = 0.75
+
     var body: some View {
         if launchScreenIsShowing {
             ZStack {
-                LinearGradient(colors: [.orange, Color(Constants.Color.accentColor).opacity(Constants.General.opacityBackground)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
+                LinearGradient(colors: [.orange, Color(Constants.Color.accentColor).opacity(0.05)],
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                .ignoresSafeArea()
                 VStack {
-                        SugarView(image: UIImage(named:Constants.Image.sugarImage) ?? UIImage (), bounceLogo: bounceLogo, opacity: opacity)
-    
+                    Image(uiImage: UIImage(named:Constants.Image.sugarImage) ?? UIImage ())
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                        .opacity(opacity)
+                      .scaleEffect(size)
                     
-                    .scaleEffect(bounceLogo ? 0.8 : 1.0)
-                    .onReceive(timer) { input in
-                        withAnimation(.spring()) {
-                            bounceLogo.toggle()
-                        }
-                    }
-                    Text(Constants.String.appName)
+                    Text(Constants.String.appName.uppercased())
                         .cornerRadius(12)
                         .scaleEffect(size)
                         .opacity(opacity)
+                        .font(.title.weight(.bold))
                 }
                 .onAppear {
-                    withAnimation(.easeIn(duration: 2)) {
-                        self.size = 1.5
+                    withAnimation(.easeIn(duration: 1)) {
+                        self.size = 1.0
                         self.opacity = 1.0
                     }
                     Task {
-                        try await Task.sleep(nanoseconds: UInt64(3.2e+9))
+                        try await Task.sleep(nanoseconds: UInt64(2.2e+9))
                         withAnimation {
                             self.launchScreenIsShowing = false
                         }
@@ -49,23 +47,15 @@ struct LaunchView: View {
                 }
             }
         } else {
-            TabViews()
+            HomeView()
         }
     }
 }
 
-
-struct SugarView: View {
-    let image: UIImage
-    let bounceLogo: Bool
-    let opacity: Double
-    var body: some View {
-        Image(uiImage: image)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 200, height: 200)
-            .opacity(opacity)
-            .scaleEffect(bounceLogo ? 0.8 : 1.0)
-            .rotationEffect(.degrees(bounceLogo ? 360 : 0))
+struct LaunchView_Preview: PreviewProvider {
+    static var previews: some View {
+        LaunchView()
     }
 }
+
+

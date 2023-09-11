@@ -17,7 +17,7 @@ final class FavoritesUnitTest: XCTestCase {
         meal = Meal(id: "",
                     title: "",
                     instructions: "",
-                    image: "",
+                    imageURL: "",
                     ingredient1: nil,
                     ingredient2: nil,
                     ingredient3: nil,

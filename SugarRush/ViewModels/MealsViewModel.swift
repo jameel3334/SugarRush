@@ -11,7 +11,6 @@ class MealsViewModel: ObservableObject {
     
     @Published var fetchedMeals: [Meal] = []
     let baseURL = Constants.Url.mealBaseURL
-    var id: String!
     
     func fetchMealsData(using id: String) async throws {
         let url = "\(baseURL)\(id)"

@@ -9,7 +9,9 @@ import SwiftUI
 
 @main
 struct SugarRushApp: App {
+    
     @StateObject var favouriteViewModel = FavoritesViewModel()
+    
     var body: some Scene {
         WindowGroup {
             LaunchView()

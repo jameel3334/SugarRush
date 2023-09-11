@@ -1,5 +1,5 @@
 //
-//  ListRowImageView.swift
+//  ImageView.swift
 //  SugarRush
 //
 //  Created by Mohammed Jameeluddin on 9/7/23.
@@ -7,14 +7,10 @@
 
 import SwiftUI
 
-enum ViewType {
-    case listRowImage
-    case detailedImage
-}
-
 struct ImageView: View {
-    var viewType: ViewType
+    
     let imageURL: String?
+    
     var body: some View {
         if let imageURL = imageURL {
             CacheAsyncImage(url: URL(string: imageURL) ?? URL(string: Constants.Image.mealPlaceholderImage)!,
@@ -23,6 +19,7 @@ struct ImageView: View {
                 case .empty :
                     Image(uiImage: UIImage(named: Constants.Image.mealPlaceholderImage) ?? UIImage())
                         .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .overlay {
                             if URL(string: imageURL) != nil {
                                 ProgressView()
@@ -31,26 +28,25 @@ struct ImageView: View {
                                     .background(.gray.opacity(0.4))
                             }
                         }
-                        .frame(width: viewType == .listRowImage ? Constants.Image.menuTileHeightWidth : Constants.Image.portraitViewImageDimensions,
-                               height: viewType == .listRowImage ? Constants.Image.menuTileHeightWidth :
-                                Constants.Image.portraitViewImageDimensions)
-                        .cornerRadius(Constants.Image.menuTileCornerRadius)
                 case .success(let image):
                     image
                         .resizable()
-                        .frame(width: viewType == .listRowImage ? Constants.Image.menuTileHeightWidth : Constants.Image.portraitViewImageDimensions,
-                               height: viewType == .listRowImage ? Constants.Image.menuTileHeightWidth :
-                                Constants.Image.portraitViewImageDimensions)                        .cornerRadius(Constants.Image.menuTileCornerRadius)
+                        .aspectRatio(contentMode: .fit)
                 case .failure:
                     Image(uiImage: UIImage(named: Constants.Image.mealPlaceholderImage) ?? UIImage())
                         .resizable()
-                        .frame(width: viewType == .listRowImage ? Constants.Image.menuTileHeightWidth : Constants.Image.portraitViewImageDimensions,
-                               height: viewType == .listRowImage ? Constants.Image.menuTileHeightWidth :
-                                Constants.Image.portraitViewImageDimensions)                        .cornerRadius(Constants.Image.menuTileCornerRadius)
+                        .aspectRatio(contentMode: .fit)
                 @unknown default:
                     EmptyView()
                 }
             }
             )}
+    }
+}
+
+
+struct ImageView_Preview: PreviewProvider {
+    static var previews: some View {
+        ImageView(imageURL: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg")
     }
 }
